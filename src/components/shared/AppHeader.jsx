@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
-import HireMeModal from '../HireMeModal';
+// import HireMeModal from '../HireMeModal';
 
 import { motion } from 'framer-motion';
-import Button from '../reusable/Button';
+import { Button } from 'react-scroll';
+// import Button from '../reusable/Button';
 
 const AppHeader = () => {
 	const [showMenu, setShowMenu] = useState(false);
@@ -44,8 +45,8 @@ const AppHeader = () => {
 			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between items-center px-4 sm:px-0">
-					<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-						<Link to="/" className="block text-left text-2xl text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+					<div className="font-general-medium  sm:ml-4 mt-2 sm:p-5 p-0 sm:shadow-lg ">
+						<Link to="/" className="flex justify-center items-center text-left text-2xl sm:text-2xl text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
 						>
 							Mohamed Fathy
 						</Link>

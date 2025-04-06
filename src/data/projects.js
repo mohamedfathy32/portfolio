@@ -1019,7 +1019,7 @@ export const projectsData = [
   {
     id: 7,
     title: "Cloud Storage Platform",
-    category: "ًWordPress",
+    category: "WordPress",
     gallery: [Image1, Image2, Image3, Image4, Image5, Image6],
     img: UIImage2,
     ProjectHeader: {
@@ -1185,7 +1185,7 @@ export const projectsData = [
   {
     id: 8,
     title: "React Social App",
-    category: "ًWordPress",
+    category: "WordPress",
     gallery: [Image1, Image2, Image3, Image4, Image5, Image6],
     img: MobileImage1,
     ProjectHeader: {
@@ -1351,7 +1351,7 @@ export const projectsData = [
   {
     id: 9,
     title: "Apple Design System",
-    category: "ًWordPress",
+    category: "WordPress",
     gallery: [Image1, Image2, Image3, Image4, Image5, Image6],
     img: WebImage1,
     ProjectHeader: {

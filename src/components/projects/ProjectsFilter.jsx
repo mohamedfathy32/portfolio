@@ -2,6 +2,7 @@ const selectOptions = [
 	'Frontend (Angular)',
 	'Mobile Application',
 	'Frontend (React)',
+	'WordPress',
 ];
 
 const ProjectsFilter = ({ setSelectProject }) => {
