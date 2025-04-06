@@ -16,7 +16,6 @@ const ProjectRelatedProjects = ({ id }) => {
 			<p className="font-general-regular text-primary-dark dark:text-primary-light text-3xl font-bold mb-10 sm:mb-14 text-left">
 				Related Projects in {project.category} Category
 			</p>
-
 			<div className="grid grid-cols-1 sm:grid-cols-4 gap-10">
 				{relatedProjects.map((relatedProject) => (
 					<ProjectSingle
