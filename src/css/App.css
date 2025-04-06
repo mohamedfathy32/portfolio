@@ -254,13 +254,13 @@ body {
 	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* equivalent to shadow-lg */
 	width: 80vw;
 	height: 500px;
-	object-fit: cover;
+	object-fit: contain;
   }
   
   @media (max-width: 768px) {
 	.modal-image {
 	  width: 90vw;
-	  height: 80vh;
+	  height: 90vh;
 	}
   }
   

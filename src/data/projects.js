@@ -29,13 +29,8 @@ import BuffaloMobile14 from "../images//Buffalo Burger/Buffalo-Burger (14).png";
 import BuffaloMobile15 from "../images//Buffalo Burger/Buffalo-Burger (15).png";
 import BuffaloMobile16 from "../images//Buffalo Burger/Buffalo-Burger (16).png";
 import BuffaloMobile17 from "../images//Buffalo Burger/Buffalo-Burger (17).png";
-import {
-  FiFacebook,
-  FiInstagram,
-  FiLinkedin,
-  FiTwitter,
-  FiYoutube,
-} from "react-icons/fi";
+import BuffaloMobile18 from "../images//Buffalo Burger/Buffalo-Burger (18).png";
+
 
 export const projectsData = [
   {
@@ -44,7 +39,7 @@ export const projectsData = [
     category: "Frontend (React)",
     img: BuffaloMain,
     gallery: [Buffalo1, Buffalo2, Buffalo3, Buffalo4, Buffalo5, Buffalo6,Buffalo7,Buffalo8,Buffalo9,Buffalo10,Buffalo11],
-    galleryMobile: [BuffaloMobile12,BuffaloMobile13,BuffaloMobile14,BuffaloMobile15,BuffaloMobile16,BuffaloMobile17],
+    galleryMobile: [BuffaloMobile12,BuffaloMobile13,BuffaloMobile14,BuffaloMobile15,BuffaloMobile16,BuffaloMobile17,BuffaloMobile18],
     ProjectHeader: {
       title: "Buffalo Burger Clone – ITI Final Project",
       publishDate: "Nov 12, 2024",
