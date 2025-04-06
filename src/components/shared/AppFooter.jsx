@@ -1,5 +1,6 @@
 
 import { FaWhatsapp, FaLinkedinIn, FaGithub, FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 
 const socialLinks = [
@@ -15,21 +16,26 @@ const socialLinks = [
 	},
 	{
 		id: 3,
+		icon: <SiGmail />,
+		url: 'mailto:mohamedfathy2630@gmail.com',
+	},
+	{
+		id: 4,
 		icon: <FaWhatsapp />,
 		url: 'https://wa.me/201094976357',
 	},
 	{
-		id: 4,
+		id: 5,
 		icon: <FaFacebookF />,
 		url: 'https://www.facebook.com/profile.php?id=100004560096021',
 	},
 	{
-		id: 5,
+		id: 6,
 		icon: <FaTwitter />,
 		url: 'https://x.com/mohamed_fathy38',
 	},
 	{
-		id: 6,
+		id: 7,
 		icon: <FaInstagram />,
 		url: 'https://www.instagram.com/mohamed_fathy26/',
 	},

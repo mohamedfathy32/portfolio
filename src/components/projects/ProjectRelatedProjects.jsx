@@ -12,7 +12,11 @@ const ProjectRelatedProjects = ({ id }) => {
 	const relatedProjects = projects.filter(p => p.category === project.category && p.id !== project.id);
 
 	return (
+
+
+		relatedProjects.length != 0 &&
 		<div className="mt-10 pt-10 sm:pt-14 sm:mt-20 border-t-2 border-primary-light dark:border-secondary-dark">
+
 			<p className="font-general-regular text-primary-dark dark:text-primary-light text-3xl font-bold mb-10 sm:mb-14 text-left">
 				Related Projects in {project.category} Category
 			</p>
@@ -28,7 +32,9 @@ const ProjectRelatedProjects = ({ id }) => {
 				))
 				}
 			</div>
+
 		</div>
+
 	);
 };
 

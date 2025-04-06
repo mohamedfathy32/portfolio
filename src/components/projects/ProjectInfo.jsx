@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import SingleProjectContext from '../../context/SingleProjectContext';
 import { ProjectsContext } from '../../context/ProjectsContext';
+import { FacebookIcon, FacebookShareButton, LinkedinIcon, LinkedinShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton } from 'react-share';
 
 const ProjectInfo = ({ id }) => {
-	
+
 	const { projects } = useContext(ProjectsContext);
 	const project = projects.find(project => project.id === parseInt(id));
+	const shareUrl = window.location.href;
 	return (
 		<div className="block sm:flex gap-0 sm:gap-10 mt-14">
 			<div className="w-full sm:w-1/3 text-left">
@@ -22,19 +24,21 @@ const ProjectInfo = ({ id }) => {
 										className="font-general-regular text-ternary-dark dark:text-ternary-light"
 										key={info.id}
 									>
-										<span>{info.title}: </span>
-										<a
-											href="https://stoman.me"
-											className={
-												info.title === 'Website' ||
-													info.title === 'Phone'
-													? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
-													: ''
-											}
-											aria-label="Project Website and Phone"
-										>
-											{info.details}
-										</a>
+										<span className='font-semibold'>{info.title} : </span>
+										{info.title === 'Website' ? (
+											<a
+												href={info.details}
+												className="hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
+												aria-label="Project Website"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												{info.details}
+											</a>
+										) : (
+											<span className="text-base">{info.details}</span>
+										)}
+
 									</li>
 								);
 							}
@@ -67,26 +71,23 @@ const ProjectInfo = ({ id }) => {
 				{/* Single project social sharing */}
 				<div>
 					<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-						{project.ProjectInfo.SocialSharingHeading}
+						Share This Project
 					</p>
 					<div className="flex items-center gap-3 mt-5">
-						{project.ProjectInfo.SocialSharing.map(
-							(social) => {
-								return (
-									<a
-										key={social.id}
-										href={social.url}
-										target="__blank"
-										aria-label="Share Project"
-										className="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500"
-									>
-										<span className="text-lg lg:text-2xl">
-											{social.icon}
-										</span>
-									</a>
-								);
-							}
-						)}
+
+						<LinkedinShareButton url={shareUrl}>
+							<LinkedinIcon size={32} round />
+						</LinkedinShareButton>
+						<WhatsappShareButton url={shareUrl} title="Check out this amazing project!">
+							<WhatsappIcon size={32} round />
+						</WhatsappShareButton>
+						<TwitterShareButton url={shareUrl} title="Check out this amazing project!">
+							<TwitterIcon size={32} round />
+						</TwitterShareButton>
+						<FacebookShareButton url={shareUrl} quote="Check out this amazing project!">
+							<FacebookIcon size={32} round />
+						</FacebookShareButton>
+
 					</div>
 				</div>
 			</div>

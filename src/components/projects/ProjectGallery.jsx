@@ -11,11 +11,15 @@ import { ProjectsContext } from "../../context/ProjectsContext";
 const ProjectGallery = ({ id }) => {
 
 	const [modalIsOpen, setModalIsOpen] = useState(false);
+	const [mobile, setMobile] = useState();
 	const [selectedIndex, setSelectedIndex] = useState(0);
 
 	const { projects } = useContext(ProjectsContext);
 	const project = projects.find(project => project.id === parseInt(id));
-	const openModal = (index) => {
+	console.log(project)
+	const openModal = (index,mobile) => {
+		console.log(mobile)
+		setMobile(mobile)
 		setSelectedIndex(index);
 		setModalIsOpen(true);
 	};
@@ -55,7 +59,7 @@ const ProjectGallery = ({ id }) => {
 						}}
 
 					>
-						{project.ProjectImages.map((project, index) => (
+						{(mobile ? project.galleryMobile : project.gallery).map((img, index) => (
 							<SwiperSlide
 								key={index}
 								style={{
@@ -67,7 +71,7 @@ const ProjectGallery = ({ id }) => {
 								}}
 							>
 								<img
-									src={project.img}
+									src={img}
 									alt="Full Size"
 									className="modal-image"
 								/>
@@ -118,28 +122,68 @@ const ProjectGallery = ({ id }) => {
 				}}
 				style={{
 					height: "auto",
-					display: modalIsOpen ? 'none' : 'block',
+					display: modalIsOpen ? 'none' : 'flex',
+					marginTop:'20px',
+					justifyContent:'center',
+					alignContent:'center'
+
 				}}
 			>
-				{project.ProjectImages.map((project, index) => (
-					<SwiperSlide key={project.id}>
+				{project.gallery.map((img, index) => (
+					<SwiperSlide key={index}>
 						<img
-							src={project.img}
-							alt={project.title}
+							src={img}
+							alt=''
 							className="rounded-xl cursor-pointer shadow-lg"
 							style={{
 								width: "100%",
-								maxWidth: "300px",
-								maxHeight: "250px",
-								objectFit: "cover",
+								// maxWidth: "300px",
+								minHeight: "200px",
+								// objectFit: "cover",
+								// textAlign:'center'
 							}}
-							onClick={() => openModal(index)}
+							onClick={() => openModal(index,false)}
 						/>
 					</SwiperSlide>
 				))}
 			</Swiper>
 
 
+			<h1 className="font-general-medium mt-10 mb-4 text-2xl xl:text-3xl  leading-normal text-gray-500 dark:text-gray-200">
+				mobile screen
+			</h1>
+			<Swiper
+				modules={[Navigation, Pagination]}
+				navigation
+				pagination={{ clickable: true }}
+				spaceBetween={0}
+				slidesPerView={2}
+				breakpoints={{
+					450: { slidesPerView: 2 },
+					768: { slidesPerView: 4 },
+					1024: { slidesPerView: 5 },
+				}}
+				style={{
+					height: "auto",
+					display: modalIsOpen ? 'none' : 'block',
+				}}
+			>
+				{project.galleryMobile.map((img, index) => (
+					<SwiperSlide key={index}>
+						<img
+							src={img}
+							alt=''
+							className="rounded-xl cursor-pointer shadow-lg"
+							style={{
+								width: "100%",
+								maxHeight: "300px",
+								objectFit: "contain",
+							}}
+							onClick={() => openModal(index,true)}
+						/>
+					</SwiperSlide>
+				))}
+			</Swiper>
 		</div>
 	);
 };
