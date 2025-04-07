@@ -25,7 +25,7 @@ const ProjectInfo = ({ id }) => {
 										key={info.id}
 									>
 										<span className='font-semibold'>{info.title} : </span>
-										{info.title === 'Website' ? (
+										{info.title === 'Website' || info.title === 'repo' ? (
 											<a
 												href={info.details}
 												className="hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"

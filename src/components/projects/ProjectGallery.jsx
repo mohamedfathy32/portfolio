@@ -129,7 +129,7 @@ const ProjectGallery = ({ id }) => {
 
 				}}
 			>
-				{project.gallery.map((img, index) => (
+				{project.gallery?.map((img, index) => (
 					<SwiperSlide key={index}>
 						<img
 							src={img}
@@ -168,7 +168,7 @@ const ProjectGallery = ({ id }) => {
 					display: modalIsOpen ? 'none' : 'block',
 				}}
 			>
-				{project.galleryMobile.map((img, index) => (
+				{project.galleryMobile?.map((img, index) => (
 					<SwiperSlide key={index}>
 						<img
 							src={img}
