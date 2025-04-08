@@ -42,14 +42,14 @@ const FathyMoviesImages = importAll(
   require.context(
     "../images/Fathy Movies",
     false,
-    /^\.\/Fathy Movies \(([1-9]|1[0-1])\)\.png$/
+    /^\.\/Fathy Movies \(([1-9]|1[0-9])\)\.png$/
   )
 );
 const FathyMoviesMobile = importAll(
   require.context(
     "../images/Fathy Movies",
     false,
-    /^\.\/Fathy Movies Mobile \(([1-9]|1[0-1])\)\.png$/
+    /^\.\/Fathy Movies Mobile \(([1-9]|1[0-9])\)\.png$/
   )
 );
 export const projectsData = [
