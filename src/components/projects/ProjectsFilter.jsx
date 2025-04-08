@@ -1,7 +1,7 @@
 const selectOptions = [
-	'Frontend (Angular)',
-	'Mobile Application (React-Native)',
 	'Frontend (React)',
+	'Mobile Application (React-Native)',
+	'Frontend (Angular)',
 	'WordPress',
 ];
 

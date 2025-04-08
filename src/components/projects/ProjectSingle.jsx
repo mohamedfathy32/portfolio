@@ -2,6 +2,13 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const ProjectSingle = ({ title, category, image, id }) => {
+	const formatTitleForURL = (title) => {
+		return title
+			.replace(/–/g, "")             // امسح الـ dash الطويلة (–)
+			.replace(/[^\w\s-]/g, "")      // امسح أي رموز غير مرغوبة
+			.replace(/\s+/g, "-")          // حول المسافات لـ -
+			.toLowerCase();                // خليه lowercase
+	};
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -12,7 +19,8 @@ const ProjectSingle = ({ title, category, image, id }) => {
 				delay: 0.15,
 			}}
 		>
-			<Link to={`/projects/single-project/${id}`} aria-label="Single Project">
+			<Link to={`/projects/single-project/${formatTitleForURL(title)}`}
+				state={{ id }} aria-label="Single Project">
 				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
 					<div>
 						<img

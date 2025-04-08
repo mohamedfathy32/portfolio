@@ -1,25 +1,16 @@
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import ProjectGallery from '../components/projects/ProjectGallery';
 import ProjectHeader from '../components/projects/ProjectHeader';
 import ProjectInfo from '../components/projects/ProjectInfo';
 import ProjectRelatedProjects from '../components/projects/ProjectRelatedProjects';
-import { SingleProjectProvider } from '../context/SingleProjectContext';
 import { motion } from 'framer-motion';
 import { ProjectsContext } from '../context/ProjectsContext';
 import { useContext } from 'react';
-// import { SingleProjectProvider } from '../context/SingleProjectContext';
 
 const ProjectSingle = () => {
-	const { id } = useParams();
-	const {
-		projects,
-		searchProject,
-		setSearchProject,
-		searchProjectsByTitle,
-		selectProject,
-		setSelectProject,
-		selectProjectsByCategory,
-	} = useContext(ProjectsContext);
+	const location = useLocation();
+	const { id } = location.state;
+	const { projects } = useContext(ProjectsContext);
 	console.log(projects)
 
 	return (
@@ -41,9 +32,6 @@ const ProjectSingle = () => {
 			<ProjectRelatedProjects id={id} />
 
 		</motion.div>
-		// <div>
-		// 	id: {id}
-		// </div>
 	);
 };
 
