@@ -1,10 +1,8 @@
 import { useContext } from 'react';
 import { FiClock, FiTag } from 'react-icons/fi';
-import SingleProjectContext from '../../context/SingleProjectContext';
 import { ProjectsContext } from '../../context/ProjectsContext';
 
 const ProjectSingleHeader = ({id}) => {
-	// const { singleProjectData } = useContext(SingleProjectContext);
 	const { projects } = useContext(ProjectsContext);
 	const project =  projects.find(project => project.id === parseInt(id));
 

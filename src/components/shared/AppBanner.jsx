@@ -1,8 +1,9 @@
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import { FiArrowDownCircle } from 'react-icons/fi';
-import developerLight from '../../images/developer.svg';
+// import developerLight from '../../images/developer.svg';
 import developerDark from '../../images/developer-dark.svg';
 import { motion } from 'framer-motion';
+import { Typewriter } from 'react-simple-typewriter';
 
 const AppBanner = () => {
 	const [activeTheme] = useThemeSwitcher();
@@ -37,7 +38,20 @@ const AppBanner = () => {
 					}}
 					className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
 				>
-					A Front-End Developer
+					<Typewriter
+						words={[
+							'Software Engineer',
+							'Front-End Developer',
+							'Mobile App Developer',
+							'WordPress Developer',
+						]}
+						loop={0} // 0 means infinite
+						cursor
+						cursorStyle="|"
+						typeSpeed={70}
+						deleteSpeed={50}
+						delaySpeed={1500}
+					/>
 				</motion.p>
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -69,9 +83,7 @@ const AppBanner = () => {
 				className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
 			>
 				<img
-					src={
-						activeTheme === 'dark' ? developerLight : developerDark
-					}
+					src={developerDark}
 					alt="Developer"
 				/>
 			</motion.div>

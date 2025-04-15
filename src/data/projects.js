@@ -3,7 +3,8 @@
 import BuffaloMain from "../images/Buffalo Burger/Buffalo-Burger-main 2.png";
 import BuffaloAppMain2 from "../images/Buffalo Burger App/main image 3.png";
 import BuffaloAdminMain from "../images/Buffalo Admin/main image 2.png";
-import FathyMoviesMain from "../images/Fathy Movies/main image 7.png";
+import FathyMoviesMain from "../images/Fathy Movies/main image.png";
+import contactCar from "../images/contact car/main image2.png";
 const importAll = (r) => r.keys().map(r);
 
 // Buffalo Burger Desktop gallery
@@ -431,4 +432,88 @@ export const projectsData = [
       ],
     },
   },
+  // {
+  //   id: 4,
+  //   title: "Fathy Movies",
+  //   category: "Frontend (React)",
+  //   img: contactCar,
+  //   gallery: FathyMoviesImages,
+  //   galleryMobile: FathyMoviesMobile,
+  //   ProjectHeader: {
+  //     title: " Fathy Movies ",
+  //     publishDate: "Sep 11, 2024",
+  //     tags: "Frontend (React)",
+  //   },
+
+  //   ProjectInfo: {
+  //     ClientHeading: "About project",
+  //     CompanyInfo: [
+  //       {
+  //         id: 1,
+  //         title: "Website",
+  //         details: "https://fathy-movies.vercel.app/",
+  //       },
+  //       {
+  //         id: 2,
+  //         title: "repo",
+  //         details: "https://github.com/mohamedfathy32/fathy-movies",
+  //       },
+  //     ],
+  //     ObjectivesHeading: "Objective",
+  //     ObjectivesDetails:
+  //       "Objective: This project was part of my early learning phase with React, where I focused on building a movie discovery platform. It allowed me to apply and enhance my skills in React while creating a fully functional, responsive website that supports both Arabic and English languages, providing users with an interactive movie browsing experience.",
+  //     Technologies: [
+  //       {
+  //         title: "Tools & Technologies",
+  //         techs: [
+  //           "HTML",
+  //           "CSS",
+  //           "JavaScript",
+  //           "React",
+  //           "Axios",
+  //           "Bootstrap",
+  //           "Redux",
+  //           "Git",
+  //           "GitHub",
+  //         ],
+  //       },
+  //     ],
+  //     ProjectDetailsHeading: "Challenge",
+  //     ProjectDetails: [
+  //       {
+  //         id: 1,
+  //         details:
+  //           "Fathy Movies is a platform for discovering and browsing movies, offering users the ability to explore content based on their preferences. The site supports both Arabic and English languages, ensuring accessibility to a wider audience. The responsive design ensures seamless viewing across all device types, whether on desktop, tablet, or mobile.",
+  //       },
+  //       {
+  //         id: 2,
+  //         details: "Key Features: ",
+  //       },
+  //       {
+  //         id: 3,
+  //         details:
+  //           "Responsive Design: The website adapts perfectly to various screen sizes, providing an optimal user experience on desktops, tablets, and mobile devices.",
+  //       },
+  //       {
+  //         id: 4,
+  //         details: "Key Features: ",
+  //       },
+  //       {
+  //         id: 5,
+  //         details:
+  //           "Multi-language Support: The platform is fully translated into both Arabic and English, catering to a diverse audience.",
+  //       },
+  //       {
+  //         id: 6,
+  //         details:
+  //           "Bootstrap Framework: Built with React and Bootstrap, ensuring a modern, clean, and user-friendly interface.",
+  //       },
+  //       {
+  //         id: 7,
+  //         details:
+  //           "API Integration: Real-time movie data fetched through an external API for up-to-date information on movies, including their titles, descriptions, and ratings.",
+  //       },
+  //     ],
+  //   },
+  // },
 ];

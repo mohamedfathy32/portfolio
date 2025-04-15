@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import SingleProjectContext from '../../context/SingleProjectContext';
 import { ProjectsContext } from '../../context/ProjectsContext';
 import { FacebookIcon, FacebookShareButton, LinkedinIcon, LinkedinShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton } from 'react-share';
 

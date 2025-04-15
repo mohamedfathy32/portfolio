@@ -1,5 +1,5 @@
 
-import { FaWhatsapp, FaLinkedinIn, FaGithub, FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaLinkedinIn, FaGithub, FaTwitter, FaFacebookF, FaInstagram , FaSnapchatGhost  } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 
@@ -38,6 +38,11 @@ const socialLinks = [
 		id: 7,
 		icon: <FaInstagram />,
 		url: 'https://www.instagram.com/mohamed_fathy26/',
+	},
+	{
+		id: 8,
+		icon: <FaSnapchatGhost />,
+		url: 'https://snapchat.com/t/nhtxs4fv',
 	},
 ];
 
