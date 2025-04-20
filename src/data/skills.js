@@ -68,57 +68,67 @@ export const skills = [
   },
   {
     id: 14,
+    title: "material ui",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
+  },
+  {
+    id: 15,
     title: "React Native",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
-    id: 15,
+    id: 16,
     title: "Expo",
     icon: "https://www.svgrepo.com/show/353722/expo.svg",
   },
   {
-    id: 16,
+    id: 17,
     title: "TypeScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
   {
-    id: 17,
+    id: 18,
     title: "Angular",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg",
   },
   {
-    id: 18,
+    id: 19,
     title: "Firebase",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
   },
   {
-    id: 19,
+    id: 20,
+    title: "Supabase",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+  },
+  {
+    id: 21,
     title: "Node.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   {
-    id: 20,
+    id: 22,
     title: "Figma",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
   },
   {
-    id: 21,
+    id: 23,
     title: "VS Code",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
   },
   {
-    id: 22,
+    id: 24,
     title: "WordPress",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
   },
   {
-    id: 23,
+    id: 25,
     title: "Vercel",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
   },
   {
-    id: 24,
+    id: 26,
     title: "npm",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
-  },
+  }
 ];

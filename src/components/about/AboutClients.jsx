@@ -9,16 +9,16 @@ const AboutClients = () => {
 			<p className="font-general-medium text-2xl sm:text-3xl  text-center text-primary-dark dark:text-primary-light">
 				{skillsHeading}
 			</p>
-			<div className="flex flex-wrap justify-center text-9xl text-center">
+			<div className="flex flex-wrap md:gap-16 gap-10 justify-center mt-8">
 				{skills.map((skill) => (
 					<div
 						key={skill.id}
-						className='w-52 py-5 px-10 mb-8 cursor-pointer text-center'
+						className='mb-8 cursor-pointer text-center md:w-36 w-16'
 					>
 						<img
 							src={skill.icon}
 							alt={skill.title}
-							className='mx-auto transition-transform transform hover:scale-110 duration-200'
+							className=' transition-transform transform hover:scale-110 duration-200'
 						/>
 						<p className="text-base mt-2 text-primary-dark dark:text-primary-light font-semibold">
 							{skill.title}
