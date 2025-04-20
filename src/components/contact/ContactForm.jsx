@@ -21,7 +21,6 @@ const ContactForm = () => {
 		console.log("form data : ");
 		console.log(formData);
 
-		// إرسال البريد عبر EmailJS
 		emailjs.send(
 			"service_vkb5dq3", // Service ID
 			"template_ztuoiwr", // Template ID
@@ -47,7 +46,7 @@ const ContactForm = () => {
 
 			})
 			.catch((error) => {
-				// استخدام SweetAlert2 في حالة حدوث خطأ
+				console.log(error)
 				Swal.fire({
 					icon: 'error',
 					title: 'خطأ في الإرسال',
